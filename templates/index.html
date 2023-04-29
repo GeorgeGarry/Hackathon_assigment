@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.js">
+  </script>
+<title>File Uploader</title>
+</head>
+<body>
+ 
+ <div >
+  <input type="file" name="files" id="files" multiple>
+  <input type="button" id="btn_uploadfile" 
+    value="Upload" 
+    onclick="upload_file(this.form);" >
+</div>
+<div class="container" align="left">
+  <a target="blank" id="result_files" type="file" style="visibility:hidden">
+    <button class='btn btn-default' onclick="download_file(this.form)" >
+      Download the report!</button>
+  </a>
+ </div>
+<script type="text/javascript" src="/static/app.js"></script>
+</body>
+</html>
+
