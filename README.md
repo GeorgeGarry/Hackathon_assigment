@@ -1,2 +1,2 @@
 # Hackathon_assigment
-TODO - write readme
+This is a flask server app. to run it you need to start a local server in the terminal (originally I used port 5000)
