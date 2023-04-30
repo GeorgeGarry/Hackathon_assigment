@@ -12,14 +12,14 @@ def read_report(file_name):
     cnc_name = list_report[0].replace("No.:", "")
     report_start_line = 0
     report_end_line = 0
-    check_not_empty = True
+    check_not_empty = "empty"
     for i in range(len(list_report)-1):
         if "_Meter__"  in list_report[i]:
             report_start_line = i+1
-            check_not_empty = False
+            check_not_empty = "not_empty"
             break
             pass
-    if check_not_empty == False:
+    if check_not_empty == "not_empty":
         for i in range(report_start_line, len(list_report)):
             if len(list_report[i]) == 1:
                 report_end_line = i
@@ -34,7 +34,7 @@ def read_report(file_name):
             # function getting the required data of a single text file
 # def get_one_report_result(start, end, report_array, concentrator_number, empty_report):
 def get_one_report_result(keys):
-    if keys["check_not_empty"] == False:
+    if keys["check_not_empty"] == "empty":
         columns = []
         row = []
         row.append("Empty report")
